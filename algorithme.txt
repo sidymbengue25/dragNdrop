@@ -1,0 +1,13 @@
+Nos zones de drop devront savoir quel est l'élément qui sera déposé, nous allons utiliser une propriété
+draggedElement
+ pour sauvegarder ça.
+Firefox nécessite l'envoi de données avec
+setData
+()
+ pour autoriser le déplacement d'éléments.
+Un élément est « droppé » ;
+Notre événement drop va alors récupérer l'élément concerné grâce à la propriété draggedElement;
+L'élément déplacé est cloné ;
+Le clone est alors ajouté à la zone de drop concernée ;
+L'élément d'origine est supprimé ;
+Et pour terminer, le clone se voit réattribuer les événements qu'il aura perdus du fait que la méthode cloneNode () ne conserve pas les événements.
